@@ -1,0 +1,44 @@
+server:
+  servlet:
+    context-path: /api
+  port: 8080
+
+spring:
+  application:
+    name: ecommerce
+  data:
+    mongodb:
+      host: ecommerce-mongo # docker container name
+      port: 27017
+      database: ecommerce
+
+ecommerce:
+  invoiceLimit: 200
+  slack:
+    token: slackToken # would be stored in more secure way like Secret Manager
+  security:
+    secret: jBIQn7lQCP6kq3lSEtnCuw4mbc3r4bha1rXA6oA2WqFHQyC5zUyAk # would be stored in more secure way like Secret Manager
+    tokenExpirationTime: 43200000
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        wait-duration-in-open-state: 10s
+        automatic-transition-from-open-to-half-open-enabled: true
+        permitted-number-of-calls-in-half-open-state: 3
+        sliding-window-size: 10
+        register-health-indicator: true
+        ignore-exceptions:
+          - com.emlakjet.ecommerce.exception.ServiceException
+    instances:
+      send-notification:
+        base-config: default
+        sliding-window-type: COUNT_BASED
+        failure-rate-threshold: 50
+        minimum-number-of-calls: 3
+      register:
+        base-config: default
+        sliding-window-type: COUNT_BASED
+        failure-rate-threshold: 50
+        minimum-number-of-calls: 3

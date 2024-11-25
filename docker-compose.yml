@@ -1,0 +1,29 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: ecommerce-mongo
+    restart: no
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./local/db:/data/db
+    networks:
+      - shared-net
+
+  emlakjet:
+    build: .
+    container_name: ecommerce-backend
+    environment:
+      runningLocally: "true"
+    links:
+      - mongo
+    depends_on:
+      - mongo
+    ports:
+      - "8080:8080"
+    networks:
+      - shared-net
+
+networks:
+  shared-net:
+    driver: bridge

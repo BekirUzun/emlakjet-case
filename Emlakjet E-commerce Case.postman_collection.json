@@ -1,0 +1,2419 @@
+{
+	"info": {
+		"_postman_id": "c3ff9e7a-5cf9-429f-91af-9b2a82d3e180",
+		"name": "Emlakjet E-commerce Case",
+		"description": "Endpoints related to Emlakjet E-commerce Case",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31708749"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "list Products",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/product/v1?page=0&pageSize=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"v1"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "list Products",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product/v1?page=0&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 Nov 2024 21:03:41 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": [\n        {\n            \"id\": \"6741da3c38bac77c991e3a17\",\n            \"code\": \"P00001\",\n            \"name\": \"Product 1\",\n            \"description\": \"Very nice product\",\n            \"price\": 100,\n            \"createdBy\": \"6740a9f2a4cdb00fd22b6117\"\n        },\n        {\n            \"id\": \"6741da5238bac77c991e3a18\",\n            \"code\": \"P00002\",\n            \"name\": \"Product 2\",\n            \"description\": \"Very nice product\",\n            \"price\": 75,\n            \"createdBy\": \"6740a9f2a4cdb00fd22b6117\"\n        },\n        {\n            \"id\": \"6741da6738bac77c991e3a19\",\n            \"code\": \"P00003\",\n            \"name\": \"Product 3\",\n            \"description\": \"Very nice product\",\n            \"price\": 300,\n            \"createdBy\": \"6740a9f2a4cdb00fd22b6117\"\n        },\n        {\n            \"id\": \"6741da7a38bac77c991e3a1a\",\n            \"code\": \"P00004\",\n            \"name\": \"Product 4\",\n            \"description\": \"Very nice product\",\n            \"price\": 125,\n            \"createdBy\": \"6740a9f2a4cdb00fd22b6117\"\n        },\n        {\n            \"id\": \"6741da8e38bac77c991e3a1b\",\n            \"code\": \"P00005\",\n            \"name\": \"Product 5\",\n            \"description\": \"Very nice product\",\n            \"price\": 175,\n            \"createdBy\": \"6740a9f2a4cdb00fd22b6117\"\n        },\n        {\n            \"id\": \"6741dad238bac77c991e3a1c\",\n            \"code\": \"P00006\",\n            \"name\": \"Product 6\",\n            \"description\": \"Very nice product\",\n            \"price\": 5,\n            \"createdBy\": \"6740a9f2a4cdb00fd22b6117\"\n        },\n        {\n            \"id\": \"67436a3bf4e8e826ea033a57\",\n            \"code\": \"P00011\",\n            \"name\": \"Product 11\",\n            \"description\": \"Very nice product\",\n            \"price\": 122,\n            \"createdBy\": \"6740a9f2a4cdb00fd22b6117\"\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"totalElements\": 7,\n        \"totalPages\": 1\n    }\n}"
+								},
+								{
+									"name": "Authentication problem",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product/v1?page=0&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"example\": {\n        \"message\": \"Authorization token is not provided or invalid\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"code\": \"P00015\",\n    \"name\": \"Product 15\",\n    \"description\": \"Very nice product 15\",\n    \"price\": 15\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"v1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "created product",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"code\": \"P00015\",\n    \"name\": \"Product 15\",\n    \"description\": \"Very nice product 15\",\n    \"price\": 15\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/product/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 Nov 2024 21:06:19 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"6743954bdf6d6b488bc68c1d\",\n    \"code\": \"P00015\",\n    \"name\": \"Product 15\",\n    \"description\": \"Very nice product 15\",\n    \"price\": 15,\n    \"createdBy\": \"6743936fdf6d6b488bc68c1a\"\n}"
+								},
+								{
+									"name": "invalid request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"code\": \"qweqweqweqwe\",\n    \"name\": \"Product 1\",\n    \"description\": \"Very nice product\",\n    \"price\": 50\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/product/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 Nov 2024 21:05:09 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"FieldError: code must match \\\"\\\\S{6}\\\"\"\n}"
+								},
+								{
+									"name": "ProductCode exists",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"code\": \"P00001\",\n    \"name\": \"Product 1\",\n    \"description\": \"Very nice product\",\n    \"price\": 50\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/product/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1"
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 Nov 2024 21:04:28 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Another product with same code already exists.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "get Product",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/product/v1/:productId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"v1",
+										":productId"
+									],
+									"variable": [
+										{
+											"key": "productId",
+											"value": "6743954bdf6d6b488bc68c1d",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get Product",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product/v1/:productId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": "6743954bdf6d6b488bc68c1d2",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 Nov 2024 21:07:38 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"6743954bdf6d6b488bc68c1d\",\n    \"code\": \"P00015\",\n    \"name\": \"Product 15\",\n    \"description\": \"Very nice product 15\",\n    \"price\": 15,\n    \"createdBy\": \"6743936fdf6d6b488bc68c1a\"\n}"
+								},
+								{
+									"name": "Authentication problem",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product/v1/:productId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"example\": {\n        \"message\": \"Authorization token is not provided or invalid\"\n    }\n}"
+								},
+								{
+									"name": "product not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product/v1/:productId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": "6743954bdf6d6b488bc68c1d2",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 Nov 2024 21:07:59 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Product with given ID doesn't exists.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update Product",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"code\": \"P00015\",\n    \"name\": \"Product 15\",\n    \"description\": \"Very nice product 15\",\n    \"price\": 16.9\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product/v1/:productId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"v1",
+										":productId"
+									],
+									"variable": [
+										{
+											"key": "productId",
+											"value": "6743954bdf6d6b488bc68c1d",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update Product",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"code\": \"P00015\",\n    \"name\": \"Product 15\",\n    \"description\": \"Very nice product 15\",\n    \"price\": 16.9\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/product/v1/:productId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": "6743954bdf6d6b488bc68c1d",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 Nov 2024 21:09:26 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"6743954bdf6d6b488bc68c1d\",\n    \"code\": \"P00015\",\n    \"name\": \"Product 15\",\n    \"description\": \"Very nice product 15\",\n    \"price\": 16.9,\n    \"createdBy\": \"6743936fdf6d6b488bc68c1a\"\n}"
+								},
+								{
+									"name": "Authentication problem",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"code\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<double>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/product/v1/:productId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"example\": {\n        \"message\": \"Authorization token is not provided or invalid\"\n    }\n}"
+								},
+								{
+									"name": "invalid request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/product/v1/:productId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 Nov 2024 21:09:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"No properties given to update.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete Product",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/product/v1/:productId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"v1",
+										":productId"
+									],
+									"variable": [
+										{
+											"key": "productId",
+											"value": "6743954bdf6d6b488bc68c1d2",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete Product",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product/v1/:productId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": "6743954bdf6d6b488bc68c1d2",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 Nov 2024 21:10:50 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Authentication problem",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product/v1/:productId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"example\": {\n        \"message\": \"Authorization token is not provided or invalid\"\n    }\n}"
+								},
+								{
+									"name": "Given productId does not exist",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product/v1/:productId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"<string>\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "invoice",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "list Invoices",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/invoice/v1?page=0&pageSize=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"invoice",
+										"v1"
+									],
+									"query": [
+										{
+											"key": "isApproved",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "list of Invoices",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/invoice/v1?page=0&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"invoice",
+												"v1"
+											],
+											"query": [
+												{
+													"key": "isApproved",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 Nov 2024 21:03:09 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": [\n        {\n            \"id\": \"67439409df6d6b488bc68c1b\",\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Doe\",\n            \"email\": \"jane@doe.com\",\n            \"amount\": 100,\n            \"productCode\": \"P00001\",\n            \"billNo\": \"FYS2024000000001\",\n            \"createdBy\": \"6743936fdf6d6b488bc68c1a\",\n            \"isApproved\": false\n        },\n        {\n            \"id\": \"67439477df6d6b488bc68c1c\",\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Doe\",\n            \"email\": \"jane@doe.com\",\n            \"amount\": 100,\n            \"productCode\": \"P00001\",\n            \"billNo\": \"FYS2024000000011\",\n            \"createdBy\": \"6743936fdf6d6b488bc68c1a\",\n            \"isApproved\": true\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"totalElements\": 2,\n        \"totalPages\": 1\n    }\n}"
+								},
+								{
+									"name": "Authentication problem",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/invoice/v1?isApproved=<boolean>&page=0&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"invoice",
+												"v1"
+											],
+											"query": [
+												{
+													"key": "isApproved",
+													"value": "<boolean>"
+												},
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"example\": {\n        \"message\": \"Authorization token is not provided or invalid\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "create Invoice",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe\",\n    \"email\": \"jane@doe.com\",\n    \"amount\": 100,\n    \"productCode\": \"P00001\",\n    \"billNo\": \"FYS2024000000021\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/invoice/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"invoice",
+										"v1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Invoice created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe\",\n    \"email\": \"jane@doe.com\",\n    \"amount\": 100,\n    \"productCode\": \"P00001\",\n    \"billNo\": \"FYS2024000000011\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/invoice/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"invoice",
+												"v1"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 Nov 2024 21:02:47 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Invoice approved and saved successfully.\",\n    \"invoice\": {\n        \"id\": \"67439477df6d6b488bc68c1c\",\n        \"firstName\": \"Jane\",\n        \"lastName\": \"Doe\",\n        \"email\": \"jane@doe.com\",\n        \"amount\": 100,\n        \"productCode\": \"P00001\",\n        \"billNo\": \"FYS2024000000011\",\n        \"createdBy\": \"6743936fdf6d6b488bc68c1a\",\n        \"isApproved\": true\n    },\n    \"successful\": true\n}"
+								},
+								{
+									"name": "Invalid request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"amount\": \"<double>\",\n  \"billNo\": \"eI87134114449558\",\n  \"email\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"productCode\": \"D_a,!d\",\n  \"product\": {\n    \"code\": \";#^zJ-\",\n    \"description\": \"<string>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/invoice/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"invoice",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"<string>\"\n}"
+								},
+								{
+									"name": "Authentication problem",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"amount\": \"<double>\",\n  \"billNo\": \"eI87134114449558\",\n  \"email\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"productCode\": \"D_a,!d\",\n  \"product\": {\n    \"code\": \";#^zJ-\",\n    \"description\": \"<string>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/invoice/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"invoice",
+												"v1"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"example\": {\n        \"message\": \"Authorization token is not provided or invalid\"\n    }\n}"
+								},
+								{
+									"name": "BillNo exists",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe\",\n    \"email\": \"jane@doe.com\",\n    \"amount\": 100,\n    \"productCode\": \"P00001\",\n    \"billNo\": \"FYS2024000000001\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/invoice/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"invoice",
+												"v1"
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 Nov 2024 21:00:57 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Given bill no already exists.\",\n    \"invoice\": {\n        \"id\": \"67439409df6d6b488bc68c1b\",\n        \"firstName\": \"Jane\",\n        \"lastName\": \"Doe\",\n        \"email\": \"jane@doe.com\",\n        \"amount\": 100,\n        \"productCode\": \"P00001\",\n        \"billNo\": \"FYS2024000000001\",\n        \"createdBy\": \"6743936fdf6d6b488bc68c1a\",\n        \"isApproved\": false\n    },\n    \"successful\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "get Invoice",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/invoice/v1/:invoiceId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"invoice",
+										"v1",
+										":invoiceId"
+									],
+									"variable": [
+										{
+											"key": "invoiceId",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Authentication problem",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/invoice/v1/:invoiceId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"invoice",
+												"v1",
+												":invoiceId"
+											],
+											"variable": [
+												{
+													"key": "invoiceId",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"example\": {\n        \"message\": \"Authorization token is not provided or invalid\"\n    }\n}"
+								},
+								{
+									"name": "Invoice not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/invoice/v1/:invoiceId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"invoice",
+												"v1",
+												":invoiceId"
+											],
+											"variable": [
+												{
+													"key": "invoiceId",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n\n    \"message\": \"Invoice with given ID doesn't exists.\"\n   \n}"
+								}
+							]
+						},
+						{
+							"name": "delete Invoice",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/invoice/v1/:invoiceId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"invoice",
+										"v1",
+										":invoiceId"
+									],
+									"variable": [
+										{
+											"key": "invoiceId",
+											"value": "674397d5bb750b101c38e626"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete Product",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/invoice/v1/:invoiceId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"invoice",
+												"v1",
+												":invoiceId"
+											],
+											"variable": [
+												{
+													"key": "invoiceId",
+													"value": "674397d5bb750b101c38e626"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 Nov 2024 21:18:22 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Authentication problem Copy",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product/v1/:productId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												"v1",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"example\": {\n        \"message\": \"Authorization token is not provided or invalid\"\n    }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "register",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"",
+											"if(pm.response.code == 201) {",
+											"   let response = pm.response.json();",
+											"   pm.environment.set('bearerToken', response.token);",
+											"",
+											"   let request = JSON.parse(pm.request.body.raw);",
+											"",
+											"   pm.environment.set('loginEmail', request.email); ",
+											"   pm.environment.set('loginPassword', request.password); ",
+											"}",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"john3@doe.com\",\n  \"fullName\": \"John Doe\",\n  \"password\": \"john123\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/v1/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"v1",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successfully registered user",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/v1/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"v1",
+												"register"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"token\": \"<string>\",\n  \"expiresIn\": \"<long>\"\n}"
+								},
+								{
+									"name": "User with given email address already exists",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/v1/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"v1",
+												"register"
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"example\": {\n    \"message\": \"User with same E-mail already exists\"\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"let response = pm.response.json();",
+											"console.log(response)",
+											"",
+											"pm.environment.set('bearerToken', response.token);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"{{loginEmail}}\",\n  \"password\": \"{{loginPassword}}\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/v1/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successfully logged in",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"{{loginEmail}}\",\n  \"password\": \"{{loginPassword}}\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/v1/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"v1",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 24 Nov 2024 20:20:01 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"token\": \"eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJqb2huQGRvZS5jb20iLCJpYXQiOjE3MzI0Nzk2MDEsImV4cCI6MTczMjUyMjgwMX0.e-0zfxDSWqOxdzkHwd7GpavYKt9D9Ov2VFVo37oqt_HCzAcSXeAUpQiwI59pa5ea\",\n    \"expiresIn\": 43200000\n}"
+								},
+								{
+									"name": "Invalid credentials",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/v1/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"v1",
+												"login"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"example\": {\n        \"message\": \"Invalid email or password\"\n    }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{bearerToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
